@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodapp/presentaion/landing/walkthrough_three_screen.dart';
-import 'package:foodapp/presentaion/landing/walkthrough_two_screen.dart';
-
-import 'presentaion/landing/walkthrough.dart';
-import 'presentaion/landing/walkthrough_one_screen.dart';
-import 'presentaion/landing/welcome_screen.dart';
+import 'package:foodapp/presentaion/homepage/homepage.dart';
+import 'package:foodapp/presentaion/homepage/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: Walkthrough(),
+      home: Index()
     );
   }
 }

@@ -1,0 +1,2 @@
+import 'package:flutter/material.dart';
+class SocialSignInButton extends StatelessWidget { const SocialSignInButton({super.key, required this.label, required this.color, required this.onPressed}); final String label; final Color color; final VoidCallback onPressed; @override Widget build(BuildContext context) => SizedBox(width: double.infinity, height: 44, child: ElevatedButton(onPressed: onPressed, style: ElevatedButton.styleFrom(backgroundColor: color), child: Text(label))); }
