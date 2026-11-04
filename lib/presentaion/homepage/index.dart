@@ -23,7 +23,64 @@ class _IndexState extends State<Index> {
   Widget build(BuildContext context) {
     return Scaffold(
       ////
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Home",),
+        centerTitle: true,
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
+        ],
+        // leading: IconButton(onPressed: (){
+
+        // }, icon: Icon(Icons.menu)),
+      ),
+      drawer: Drawer(
+        child: Column(
+          children:[
+            DrawerHeader(child: Column(
+              children:[
+                CircleAvatar(
+                  radius: 40,
+                  backgroundImage: AssetImage("images/g12.png"),
+                ),
+                Container(
+                  height: 10,
+                ),
+                Text("Nguyen Van A"),
+              ]
+            )),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("Home"),
+              onTap: (){
+                //Navigator.of(context).pop();
+                Navigator.push(context, MaterialPageRoute(builder: (_,){return Example();}));
+                
+              }, 
+              onLongPress:(){
+                print("on long press");
+              }
+            ),
+            ListTile(
+              leading: Icon(Icons.mail),
+              title: Text("Inbox"),
+            ),
+            ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text("favorite"),
+            ),
+            ListTile(
+              leading: Icon(Icons.dark_mode),
+              title: Text("dartmode"),
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text("setting"),
+            )
+          ]
+
+        ),
+      ),
       body: SafeArea(child: listScreen[value]),
       ////
       floatingActionButton: FloatingActionButton(
